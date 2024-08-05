@@ -1,4 +1,4 @@
-Source: linux-npu-driver
+Source: intel-cm-compiler
 Section: libs
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -7,37 +7,14 @@ Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
  cmake,
- libgmock-dev,
- libgtest-dev,
- libssl-dev,
- libudev-dev,
- libyaml-cpp-dev,
- libze-dev,
- vpux-elf,
 Standards-Version: 4.6.2
-Homepage: https://github.com/intel/linux-npu-driver
+Homepage: https://github.com/intel/cm-compiler
 
-Package: linux-npu-driver
+Package: intel-cm-compiler
 Architecture: amd64
 Multi-Arch: same
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
-Description: This package contains the driver for Intel® NPU device.
- Intel® NPU device is an AI inference accelerator integrated with Intel client
- CPUs, starting from Intel® Core™ Ultra generation of CPUs (formerly known
- as Meteor Lake). It enables energy-efficient execution of artificial neural
- network tasks.
-
-Package: linux-npu-driver-dev
-Section: libdevel
-Architecture: amd64
-Multi-Arch: same
-Depends:
- linux-npu-driver (= ${binary:Version}),
- ${misc:Depends},
-Description: This dev package contains the driver for Intel® NPU device.
- Intel® NPU device is an AI inference accelerator integrated with Intel client
- CPUs, starting from Intel® Core™ Ultra generation of CPUs (formerly known as
- Meteor Lake). It enables energy-efficient execution of artificial neural
- network tasks.
+Description: Contains the Intel cm-compiler
+ For more information, please see https://github.com/intel/cm-compiler
